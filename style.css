@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  height: 100svh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  background-color: #eeeeee;
+  scale: 0.8;
+}
+
+@media (max-width: 500px) {
+  body {
+    scale: .5;
+  }
+  body .details {
+    scale: 1.5;
+    bottom: -20svh !important;
+  }
+}
+
+body .details {
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  text-align: center;
+  position: fixed;
+  bottom: -6svh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+}
+
+body .details p {
+  margin: 2px 0 10px 0;
+}
+
+body .details a {
+  border: 2px dashed black;
+  padding: 8px 18px;
+  color: black;
+  text-decoration: none;
+}
+
+body .details a:hover {
+  text-decoration: underline;
+  border-color: #a9a9a9;
+}
+
+body .wall {
+  background-color: #fff;
+  height: 300px;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0;
+}
+
+body .wall .black-top {
+  height: 60%;
+  width: 100%;
+  background-color: #000;
+  padding: 10px 0;
+  z-index: 1;
+}
+
+body .wall .black-top .color {
+  background-color: #f1cf26;
+}
+
+body .wall .black-top .row {
+  height: 30px;
+  width: 100%;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+}
+
+body .wall .black-top .row .square {
+  background-color: #f1cf26;
+  width: 30px;
+  height: inherit;
+}
+
+body .wall .black-top .row .square .rzstyle {
+  background-color: inherit;
+  height: 30px;
+  width: inherit;
+  scale: 1.01;
+  rotate: 45deg;
+}
+
+body .wall .black-top .row .null {
+  width: 100%;
+}
+
+body .wall .black-top .ngrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  overflow: hidden;
+}
+
+body .wall .black-top .ngrow .rbstyle {
+  border-bottom: 8px solid white;
+  height: 60px;
+  min-width: 60px;
+  width: 60px;
+  border-radius: 100%;
+  -webkit-box-shadow: 2px 3px 5px #0000001e;
+          box-shadow: 2px 3px 5px #0000001e;
+}
+
+body .wall .black-top .ngrow .rbstyle:nth-child(1) {
+  margin-left: -50%;
+}
+
+body .wall .bb {
+  height: 40%;
+  padding-top: 5px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+body .wall .bb .brick-line {
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+body .wall .bb .brick-line .brick {
+  min-width: 60px;
+  width: 60px;
+  height: inherit;
+  background-color: #a5a5a5;
+}
+
+body .wall .bb .brick-line .brick:nth-child(1) {
+  margin-left: -4%;
+}
+
+body .wall .bb .brick-line:nth-child(2) .brick:nth-child(1), body .wall .bb .brick-line:nth-last-child(1) .brick:nth-child(1) {
+  margin-left: -15%;
+}
+
+body .left {
+  -webkit-transform: perspective(300px) rotateY(-50deg);
+          transform: perspective(300px) rotateY(-50deg);
+  margin-right: 6.5px;
+}
+
+body .right {
+  margin-left: 6.5px;
+  -webkit-transform: perspective(300px) rotateY(50deg);
+          transform: perspective(300px) rotateY(50deg);
+}
+/*# sourceMappingURL=style.css.map */

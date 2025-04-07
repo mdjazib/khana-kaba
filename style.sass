@@ -1,0 +1,107 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+@mixin flex($j,$a,$d,$g)
+    display: flex
+    justify-content: $j
+    align-items: $a
+    flex-direction: $d
+    gap: $g
+body
+    transition: .2s ease
+    height: 100svh
+    @include flex(center,center,row,0)
+    background-color: #eeeeee
+    scale: 0.8
+    @media (max-width:500px)
+        scale: .5
+        .details
+            scale: 1.5
+            bottom: -20svh !important
+    .details
+        transition: .2s ease
+        text-align: center
+        position: fixed
+        bottom: -6svh
+        @include flex(center,center,column,10px)
+        max-width: 600px
+        p
+            margin: 2px 0 10px 0
+        a
+            border: 2px dashed black
+            padding: 8px 18px
+            color: black
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+                border-color: #a9a9a9
+    .wall
+        background-color: #fff
+        height: 300px
+        width: 300px
+        @include flex(flex-start,flex-start,column,0)
+        .black-top
+            height: 60%
+            width: 100%
+            background-color: #000
+            padding: 10px 0
+            z-index: 1
+            .color
+                background-color: #f1cf26
+            .row
+                height: 30px
+                width: 100%
+                margin: 20px 0
+                @include flex(space-between,center,row,10px)
+                .square
+                    background-color: #f1cf26
+                    width: 30px
+                    height: inherit
+                    .rzstyle
+                        background-color: inherit
+                        height: 30px
+                        width: inherit
+                        scale: 1.01
+                        rotate: 45deg
+                .null
+                    width: 100%
+            .ngrow
+                @include flex(space-between,center,row,0)
+                overflow: hidden
+                .rbstyle
+                    border-bottom: 8px solid white
+                    height: 60px
+                    min-width: 60px
+                    width: 60px
+                    border-radius: 100%
+                    box-shadow: 2px 3px 5px #0000001e
+                    &:nth-child(1)
+                        margin-left: -50%
+        .bb
+            height: 40%
+            padding-top: 5px
+            width: 100%
+            @include flex(flex-start,flex-start,column,5px)
+            .brick-line
+                height: 25px
+                @include flex(flex-start,center,row,5px)
+                overflow: hidden
+                width: 100%
+                .brick
+                    min-width: 60px
+                    width: 60px
+                    height: inherit
+                    background-color: #a5a5a5
+                    &:nth-child(1)
+                        margin-left: -4%
+                &:nth-child(2),
+                &:nth-last-child(1)
+                    .brick:nth-child(1)
+                        margin-left: -15%
+    .left
+        transform: perspective(300px) rotateY(-50deg)
+        margin-right: 6.5px
+    .right
+        margin-left: 6.5px
+        transform: perspective(300px) rotateY(50deg)
